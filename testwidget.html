@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src=“https://gointeract.io/agent-app/plugins/postmessage.js"></script>
+</head>
+<body>
+<text>Hello!</text>
+<script> 
+var messageDetails = {
+"paymentData":{
+"id": id,
+"status": status,
+"confirmationNumber": confirmationNumber,
+"customerNotificationEmail" : customerNotificationEmail,
+"authCode" : authCode,
+"amount" : amount
+}
+};
+window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
+</script>
+<text>Done!</text>
+</body>
+<html>
