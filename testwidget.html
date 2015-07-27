@@ -14,19 +14,20 @@
 </form>
 <br/>
 <script> 
-var id = this.elements.pymtid.value;
-var authCode = this.elements.authcode.value;
-var amount = this.elements.amt.value;
-var status = this.elements.status.value;
-var messageDetails = {
-"paymentData":{
-"id": id,
-"status": status,
-"authCode" : authCode,
-"amount" : amount
-}
+document.forms.form.onsubmit = function() {
+  var id = this.elements.pymtid.value;
+  var authCode = this.elements.authcode.value;
+  var amount = this.elements.amt.value;
+  var status = this.elements.status.value;
+  var messageDetails = {
+    "paymentData":{
+    "id": id,
+    "status": status,
+    "authCode" : authCode,
+    "amount" : amount
+  }
+  window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 };
-window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 </script>
 <text>Done!</text>
 </body>
