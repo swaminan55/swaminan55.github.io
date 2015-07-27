@@ -9,7 +9,7 @@
   <input type="text" name="pymtid" value="tmboi07272015"/>
   <input type="text" name="authcode" value="123456"/>
   <input type="text" name="amt" value="1.00"/>
-  <input type="text" name="status" value="SUCCESS"/>
+  <input type="text" name="stat" value="SUCCESS"/>
   <input type="submit"/>
 </form>
 <br/>
@@ -18,14 +18,14 @@ document.forms.form.onsubmit = function() {
   var id = this.elements.pymtid.value;
   var authCode = this.elements.authcode.value;
   var amount = this.elements.amt.value;
-  var status = this.elements.status.value;
+  var stat = this.elements.stat.value;
   var messageDetails = {
     "paymentData":{
     "id": id,
-    "status": status,
+    "status": stat,
     "authCode" : authCode,
     "amount" : amount
-  }
+  };
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 };
 </script>
