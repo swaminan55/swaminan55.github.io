@@ -5,12 +5,19 @@
 </head>
 <body>
 <text>Start trial!</text>
+<form name="form">
+  <input type="text" name="pymtid" value="tmboi07272015"/>
+  <input type="text" name="authcode" value="123456"/>
+  <input type="text" name="amt" value="1.00"/>
+  <input type="text" name="status" value="SUCCESS"/>
+  <input type="submit"/>
+</form>
 <br/>
 <script> 
-var id = 'tmboi07202015';
-var authCode = '123456';
-var amount = '1.00';
-var status = 'SUCCESS';
+var id = this.elements.pymtid.value;
+var authCode = this.elements.authcode.value;
+var amount = this.elements.amt.value;
+var status = this.elements.status.value;
 var messageDetails = {
 "paymentData":{
 "id": id,
