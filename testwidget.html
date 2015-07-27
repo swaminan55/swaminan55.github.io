@@ -25,6 +25,7 @@ document.forms.form.onsubmit = function() {
     "status": stat,
     "authCode" : authCode,
     "amount" : amount
+    }
   };
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 };
