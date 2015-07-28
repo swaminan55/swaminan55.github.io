@@ -33,6 +33,8 @@ document.forms.form.onsubmit = function() {
   //document.getElementById('amt').disabled = 'disabled';
   //document.getElementById('pymtcard').disabled = 'disabled';
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
+  document.form.pymtcard.disabled = true;
+  document.form.amt.disabled = true;
   document.form.Submit.disabled = true;
 }
 </script>
