@@ -7,19 +7,21 @@
 <text>Start trial!</text>
 <br/>
 <form name="form">
-  <input type="text" name="pymtid" value="tmboi07272015"/>
-  <input type="text" name="authcode" value="123456"/>
+  <input type="text" name="pymtcard" value=""/>
   <input type="text" name="amt" value="1.00"/>
-  <input type="text" name="stat" value="SUCCESS"/>
   <input type="submit"/>
 </form>
 <br/>
 <script> 
 document.forms.form.onsubmit = function() {
-  var id = this.elements.pymtid.value;
-  var authCode = this.elements.authcode.value;
+  var id = '123456';
+  var authCode = '123456';
   var amount = this.elements.amt.value;
-  var stat = this.elements.stat.value;
+  var stat = 'SUCCESS';
+  if (amount > 10.00) {
+    stat = 'FAILED';
+  }
+  
   var messageDetails = {
     "paymentData":{
     "id": id,
@@ -27,7 +29,10 @@ document.forms.form.onsubmit = function() {
     "authCode" : authCode,
     "amount" : amount
     }
-  } 
+  }
+  document.getElementById('amt').disabled = 'disabled';
+  document.getElementById('pymtcard').disabled = 'disabled';
+  document.form.Submit.disabled = true;
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 }
 </script>
