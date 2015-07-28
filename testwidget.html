@@ -30,8 +30,8 @@ document.forms.form.onsubmit = function() {
     "amount" : amount
     }
   }
-  document.getElementById('amt').disabled = 'disabled';
-  document.getElementById('pymtcard').disabled = 'disabled';
+  //document.getElementById('amt').disabled = 'disabled';
+  //document.getElementById('pymtcard').disabled = 'disabled';
   document.form.Submit.disabled = true;
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
 }
