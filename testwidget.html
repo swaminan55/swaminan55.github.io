@@ -2,16 +2,6 @@
 <html>
 <head>
 <!-- <script src=“https://gointeract.io/agent-app/plugins/postmessage.js"></script> -->
-</head>
-<body>
-<text>Start trial!</text>
-<br/>
-<form name="form">
-  <input type="text" name="pymtcard" value=""/>
-  <input type="text" name="amt" value="1.00"/>
-  <input type="submit" name="Submit" />
-</form>
-<br/>
 <script> 
 document.forms.form.onsubmit = function() {
   var id = '123456';
@@ -40,7 +30,17 @@ document.forms.form.onsubmit = function() {
   window.location.href = "https://swaminan55.github.io/index.html";
 }
 </script>
+</head>
+<body>
+<text>Start trial!</text>
 <br/>
-<text>Enter trial data and hit submit and click next button to continue!</text>
+<form name="form">
+  Enter Card Number <input type="text" name="pymtcard" value="4000000000000001"/> <br/>
+  Enter Auth amount <input type="text" name="amt" value="1.00"/> <br/>
+  <input type="submit" name="Submit" /> <br/>
+</form>
+<br/>
+<br/>
+<text>Enter trial data and hit submit and click the Next button to continue!</text>
 </body>
 <html>
