@@ -37,6 +37,10 @@ document.forms.form.onsubmit = function() {
   //document.form.pymtcard.disabled = true;
   //document.form.amt.disabled = true;
   //document.form.Submit.disabled = true;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "index.html", false);
+  xmlhttp.send();
+  return xmlhttp.responseText;
 }
 </script>
 <br/>
