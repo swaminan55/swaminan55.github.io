@@ -8,7 +8,9 @@
 <br/>
 <br/>
 <form name="form">
-  Card Number <input type="text" name="pymtcard" value="4000000000000001"/>  Auth amount <input type="text" name="amt" value="1.00"/> <input type="submit" name="Submit" /> <br/>
+  Card Number <input type="text" name="pymtcard" value="4000000000000001"/><br/>
+  Auth amount <input type="text" name="amt" value="1.00"/><br/>
+  <input type="submit" name="Submit" /> <br/>
 </form>
 <script> 
 document.forms.form.onsubmit = function() {
@@ -17,7 +19,7 @@ document.forms.form.onsubmit = function() {
   var amount = this.elements.amt.value;
   var stat = 'SUCCESS';
   if (amount > 10.00) {
-    stat = 'FAILED';
+    stat = 'FAILURE';
   }
   
   var messageDetails = {
