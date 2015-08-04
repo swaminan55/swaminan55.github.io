@@ -23,11 +23,9 @@ document.forms.form.onsubmit = function() {
   }
   
   var messageDetails = {
-    "paymentData":{
-    "id": id,
-    "stat": stat,
-    "authCode" : authCode,
-    "amount" : amount
+    "CardValidationStatus":{
+    "overallstatus": stat
+    "amount": amount
     }
   }
   window.parent.postMessage(JSON.stringify(messageDetails), "https://gointeract.io");
