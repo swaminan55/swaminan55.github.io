@@ -17,9 +17,9 @@ document.forms.form.onsubmit = function() {
   var id = '123456';
   var authCode = '123456';
   var amount = this.elements.amt.value;
-  var stat = 'SUCCESS';
+  var stat = 'Success';
   if (amount > 10.00) {
-    stat = 'FAILURE';
+    stat = 'Failure';
   }
   
   var messageDetails = {
